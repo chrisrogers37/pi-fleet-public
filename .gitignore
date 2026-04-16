@@ -1,0 +1,23 @@
+# Secrets — never commit
+*.env
+.env
+.env.*
+.mcp.json
+
+# OAuth credentials
+.google_workspace_mcp/
+
+# Claude config (auth tokens, plugin cache, channel state)
+.claude/
+
+# Node modules
+node_modules/
+
+# Cloned project repos
+*/projects/
+
+# Logs
+*.log
+
+# OS
+.DS_Store

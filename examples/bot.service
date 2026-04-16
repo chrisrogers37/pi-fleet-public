@@ -1,0 +1,17 @@
+[Unit]
+Description=My Bot - Claude Code Assistant
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=YOUR_USER
+Environment=PATH=/usr/local/bin:/usr/bin:/bin:/home/YOUR_USER/.bun/bin:/home/YOUR_USER/.npm-global/bin
+Environment=HOME=/home/YOUR_USER
+WorkingDirectory=/home/YOUR_USER/claudlobby/my-bot
+ExecStart=/home/YOUR_USER/claudlobby/bot-common/start-bot.sh /home/YOUR_USER/claudlobby/my-bot
+RemainAfterExit=yes
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target
